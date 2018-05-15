@@ -168,19 +168,20 @@ def dropdown_vdf():
     def textbox_main(main_value):
         global rowline
         e = tkinter.Entry(window) #textbox
-        e.insert(0, Variable_Data_Fields[main_value])
+        main_value = Variable_Data_Fields[main_value]
+        e.insert(0, main_value)
         e.grid(row=rowline) #can't get the textbox to be any longer
         #subfield dropdown
 
         def textbox_subfield(sub_value):
             e.delete(0, 100)
             e.insert(0,
-                     str(Variable_Data_Fields[main_value]) +
-                     subfield[str(Variable_Data_Fields[main_value])][sub_value]
+                     str(main_value) +
+                     subfield[str(main_value)][sub_value]
                      ) #gets value from dictionary within dictionary
         d_sub = tkinter.StringVar()
         d_sub.set('Sub-Field')
-        p_sub = tkinter.OptionMenu(window, d_sub, *subfield[str(Variable_Data_Fields[main_value])], command=textbox_subfield)
+        p_sub = tkinter.OptionMenu(window, d_sub, *subfield[str(main_value)], command=textbox_subfield)
         p_sub.grid(row=rowline-1, column=1)
         rowline+=2
         entry_button()
