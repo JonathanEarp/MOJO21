@@ -160,6 +160,7 @@ def entry_button():
     global rowline
     new_entry = tkinter.Button(window, text = 'New Entry', command = dropdown_vdf)
     new_entry.grid(row = rowline)
+
 #variable data field drop-down menu
 def dropdown_vdf():
     global rowline
@@ -167,17 +168,24 @@ def dropdown_vdf():
     def textbox_main(main_value):
         global rowline
         e = tkinter.Entry(window) #textbox
-        e.insert(0, Variable_Data_Fields[main_value])
+        main_value = Variable_Data_Fields[main_value]
+        e.insert(0, main_value)
         e.grid(row=rowline) #can't get the textbox to be any longer
         #subfield dropdown
+
         def textbox_subfield(sub_value):
-            e.insert(100, subfield[str(Variable_Data_Fields[main_value])][sub_value]) #gets value from dictionary within dictionary
+            e.delete(0, 100)
+            e.insert(0,
+                     str(main_value) +
+                     subfield[str(main_value)][sub_value]
+                     ) #gets value from dictionary within dictionary
         d_sub = tkinter.StringVar()
         d_sub.set('Sub-Field')
-        p_sub = tkinter.OptionMenu(window, d_sub, *subfield[str(Variable_Data_Fields[main_value])], command=textbox_subfield)
+        p_sub = tkinter.OptionMenu(window, d_sub, *subfield[str(main_value)], command=textbox_subfield)
         p_sub.grid(row=rowline-1, column=1)
         rowline+=2
         entry_button()
+
     d_vdf = tkinter.StringVar()
     d_vdf.set('Variable Data Field')
     p_vdf = tkinter.OptionMenu(window, d_vdf, *Variable_Data_Fields, command=textbox_main)
