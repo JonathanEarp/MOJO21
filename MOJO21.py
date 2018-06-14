@@ -157,45 +157,44 @@ subfield={
 #functions
 #new field button function
 def entry_button(): 
-    global rowline
-    new_entry = tkinter.Button(window, text = 'New Entry', command = dropdown_vdf)
+    global rowline, e
+    new_entry = tkinter.Button(window, text = 'New Entry', command = entry)
     new_entry.grid(row = rowline)
+
+def entry():
+    global rowline
+    dropdown_vdf()
+    rowline+=1
+    textbox()
+    rowline+=1
+    entry_button()
+
+#textbox function
+def textbox():
+    global rowline, e
+    e = tkinter.Entry(window) #textbox
+    e.grid(row=rowline) #can't get the textbox to be any longer
 
 #variable data field drop-down menu
 def dropdown_vdf():
-    global rowline
-    #textbox function
-    def textbox_main(main_value):
-        global rowline
-        e = tkinter.Entry(window) #textbox
+    global rowline, e
+    def textbox_main(main_value): #inserts main value into textbox from dropdown menu
+        global rowline, e
         main_value = Variable_Data_Fields[main_value]
         e.insert(0, main_value)
-        e.grid(row=rowline) #can't get the textbox to be any longer
-        #subfield dropdown
-
-        def textbox_subfield(sub_value):
-            e.delete(0, 100)
-            e.insert(0,
-                     str(main_value) +
-                     subfield[str(main_value)][sub_value]
-                     ) #gets value from dictionary within dictionary
+        def textbox_subfield(sub_value): #inserts sub value into textbox from dropdown menu
+            e.insert(100, subfield[str(main_value)][sub_value]) #gets value from dictionary within dictionary
         d_sub = tkinter.StringVar()
         d_sub.set('Sub-Field')
         p_sub = tkinter.OptionMenu(window, d_sub, *subfield[str(main_value)], command=textbox_subfield)
-        p_sub.grid(row=rowline-1, column=1)
-        rowline+=2
-        entry_button()
-
+        p_sub.grid(row=rowline-2, column=1)
+        
     d_vdf = tkinter.StringVar()
     d_vdf.set('Variable Data Field')
     p_vdf = tkinter.OptionMenu(window, d_vdf, *Variable_Data_Fields, command=textbox_main)
     p_vdf.grid(row=rowline)
-    rowline+=1
+
    
-
-
-
 rowline = 1 #global variable to keep track of new lines
-entry_button() #starts program/function loop
-
+entry() #starts program/function loop
 window.mainloop()
