@@ -1,5 +1,5 @@
 #MARC21 CATALOGUE CREATOR
-#Copyright 2018, Jonathan Marcus Earp
+#Copyright 2018, Jonathan Earp
 
 import tkinter
 from marc21 import *
@@ -23,10 +23,11 @@ def restart_button():
     new_entry = tkinter.Button(window, text = 'Restart', command = restart)
     new_entry.grid(row = rowline, column=1)
     
-#def restart():
+def restart():
+    x = 1
 
     
-def entry():
+def entry():  #the main function that includes others in the right formatting order
     global rowline, box_counter
     box_counter+=1
     dropdown_vdf()
@@ -63,7 +64,10 @@ def dropdown_vdf():
     p_vdf.grid(row=rowline)
 
 while True:
+    x = 0 #restart variable
     box_counter = 1 #variable to keep track of textbox changes
     rowline = 1 #global variable to keep track of new lines
     entry() #starts program/function loop
+    if x == 1:
+        continue
     window.mainloop()
