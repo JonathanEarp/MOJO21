@@ -16,7 +16,7 @@ window.resizable(width=True, height=True)
 def entry_button(): 
     global rowline, e
     new_entry = tkinter.Button(window, text = 'New Entry', command = entry)
-    new_entry.grid(row = rowline)
+    new_entry.grid(row = rowline, column=0)
 
 def restart_button():
     global rowline, e
@@ -40,7 +40,7 @@ def entry():
 def textbox():
     global rowline, e
     e = tkinter.Entry(window) #textbox
-    e.grid(row=rowline) #can't get the textbox to be any longer
+    e.grid(row=rowline, column=0) #can't get the textbox to be any longer
 
 #variable data field drop-down menu
 def dropdown_vdf():
@@ -60,7 +60,7 @@ def dropdown_vdf():
     d_vdf = tkinter.StringVar()
     d_vdf.set('Variable Data Field')
     p_vdf = tkinter.OptionMenu(window, d_vdf, *Variable_Data_Fields, command=textbox_main)
-    p_vdf.grid(row=rowline)
+    p_vdf.grid(row=rowline, column=0)
 
 while True:
     box_counter = 1 #variable to keep track of textbox changes
