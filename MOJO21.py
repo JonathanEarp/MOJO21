@@ -10,7 +10,7 @@ def on_configure(event):
     canvas.configure(scrollregion=canvas.bbox('all'))
 
 root = tk.Tk()
-root.geometry("350x400")
+root.geometry("600x400")
 root.title("MOJO21: MARC 21 Catalogue Creator")
 root.resizable(width=True, height=True)
 
@@ -31,6 +31,7 @@ canvas.bind('<Configure>', on_configure)
 # --- put frame in canvas ---
 
 frame = tk.Frame(canvas)
+frame.bind('<Configure>', on_configure) #update scrollbar when widget is out of view
 canvas.create_window((0,0), window=frame, anchor='nw')
 
 # --- add widgets in frame ---
@@ -47,6 +48,7 @@ class marcgui:
         self.textbox()
         self.rowline+=1
         self.entry_button()
+        canvas.configure(scrollregion=canvas.bbox('all'))
 
     def entry_button(self): 
         self.new_entry = tk.Button(frame, text = 'New Entry', command = self.entry)
@@ -59,12 +61,13 @@ class marcgui:
 
     def textbox(self):
         self.e = tk.Entry(frame) #textbox
-        self.e.grid(row=self.rowline, columnspan=2, sticky='w')
+        self.e.grid(row=self.rowline, columnspan=2, sticky='we')
+
 
     def dropdown_vdf(self):
         def textbox_main(main_value): #inserts main value into textbox from dropdown menu
             main_value = Variable_Data_Fields[main_value]
-            self.e.delete(0, 3)
+            self.e.delete(0, 100)
             self.e.insert(0, main_value)
             def textbox_subfield(sub_value): #inserts sub value into textbox from dropdown menu
                 self.e.insert(100, subfield[str(main_value)][sub_value]) #gets value from dictionary within dictionary
@@ -77,6 +80,8 @@ class marcgui:
         d_vdf.set('Variable Data Field')
         p_vdf = tk.OptionMenu(frame, d_vdf, *Variable_Data_Fields, command=textbox_main)
         p_vdf.grid(row=self.rowline, sticky='w')
+
+    
 
 var = marcgui()
 root.mainloop()
