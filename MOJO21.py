@@ -1,5 +1,5 @@
 #MARC21 CATALOGUE CREATOR
-#Copyright 2018, Jonathan Earp
+#Copyright 2018 - Jonathan Earp
 
 import tkinter as tk
 from marc21 import *
@@ -57,30 +57,32 @@ class marcgui:
     def entry(self):
         global rownum
         rownum+=2
+        self.new_entry.grid_forget()
         var = marcgui()
 
     def textbox(self):
         self.e = tk.Entry(frame) #textbox
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
-
-
+        
     def dropdown_vdf(self):
         def textbox_main(main_value): #inserts main value into textbox from dropdown menu
-            main_value = Variable_Data_Fields[main_value]
+            self.main_value = Variable_Data_Fields[main_value]
             self.e.delete(0, 100)
-            self.e.insert(0, main_value)
-            def textbox_subfield(sub_value): #inserts sub value into textbox from dropdown menu
-                self.e.insert(100, subfield[str(main_value)][sub_value]) #gets value from dictionary within dictionary
-            d_sub = tk.StringVar()
-            d_sub.set('Sub-Field')
-            p_sub = tk.OptionMenu(frame, d_sub, *subfield[str(main_value)], command=textbox_subfield)
-            p_sub.grid(row=self.rowline-2, column=1, sticky='w')
-        
+            self.e.insert(0, self.main_value)
+            self.dropdown_sub()
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
         p_vdf = tk.OptionMenu(frame, d_vdf, *Variable_Data_Fields, command=textbox_main)
         p_vdf.grid(row=self.rowline, sticky='w')
 
+    def dropdown_sub(self):
+        def textbox_subfield(sub_value): #inserts sub value into textbox from dropdown menu
+            self.e.insert(100, subfield[str(self.main_value)][sub_value]) #gets value from dictionary within dictionary
+        d_sub = tk.StringVar()
+        d_sub.set('Sub-Field')
+        p_sub = tk.OptionMenu(frame, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
+        p_sub.grid_forget()
+        p_sub.grid(row=self.rowline-2, column=1, sticky='w')
     
 
 var = marcgui()
