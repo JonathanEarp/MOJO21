@@ -48,7 +48,6 @@ class marcgui:
         self.textbox()
         self.rowline+=1
         self.entry_button()
-        canvas.configure(scrollregion=canvas.bbox('all'))
 
     def entry_button(self): 
         self.new_entry = tk.Button(frame, text = 'New Entry', command = self.entry)
@@ -84,7 +83,6 @@ class marcgui:
         p_sub.grid_forget()
         p_sub.grid(row=self.rowline-2, column=1, sticky='w')
     
-
 var = marcgui()
 root.mainloop()
 
