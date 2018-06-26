@@ -8,6 +8,10 @@ def on_configure(event):
     # update scrollregion after starting 'mainloop'
     # when all widgets are in canvas
     canvas.configure(scrollregion=canvas.bbox('all'))
+    #auto_scroll()
+
+def auto_scroll():
+    canvas.yview_moveto("1")
 
 root = tk.Tk()
 root.geometry("600x400")
@@ -68,6 +72,10 @@ class marcgui:
             self.main_value = Variable_Data_Fields[main_value]
             self.e.delete(0, 100)
             self.e.insert(0, self.main_value)
+            try:
+                self.p_sub.grid_forget()
+            except AttributeError:
+                pass
             self.dropdown_sub()
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
@@ -79,9 +87,9 @@ class marcgui:
             self.e.insert(100, subfield[str(self.main_value)][sub_value]) #gets value from dictionary within dictionary
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
-        p_sub = tk.OptionMenu(frame, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
-        p_sub.grid_forget()
-        p_sub.grid(row=self.rowline-2, column=1, sticky='w')
+        self.p_sub = tk.OptionMenu(frame, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
+        self.p_sub.grid_forget()
+        self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
     
 var = marcgui()
 root.mainloop()
