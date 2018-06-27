@@ -4,49 +4,26 @@
 import tkinter as tk
 from marc21 import *
 
-def on_configure(event):
-    # update scrollregion after starting 'mainloop'
-    # when all widgets are in canvas
-    canvas.configure(scrollregion=canvas.bbox('all'))
-    #auto_scroll()
-
-def auto_scroll():
-    canvas.yview_moveto("1")
-
+#creating root window
 root = tk.Tk()
-root.geometry("600x400")
+root.geometry("640x400")
 root.title("MOJO21: MARC 21 Catalogue Creator")
 root.resizable(width=True, height=True)
 
-# --- create canvas with scrollbar ---
+#creating Frames to put widgets in
+left = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
+left.grid_propagate(0)
+right = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
 
-canvas = tk.Canvas(root)
-canvas.pack(side=tk.LEFT, fill='both', expand=1)
+left.pack(side="left", expand=True, fill="both")
+right.pack(side="right", expand=True, fill="both")
 
-scrollbar = tk.Scrollbar(root, command=canvas.yview)
-scrollbar.pack(side=tk.RIGHT, fill='y')
-
-canvas.configure(yscrollcommand = scrollbar.set)
-
-# update scrollregion after starting 'mainloop'
-# when all widgets are in canvas
-canvas.bind('<Configure>', on_configure)
-
-# --- put frame in canvas ---
-
-frame = tk.Frame(canvas)
-frame.bind('<Configure>', on_configure) #update scrollbar when widget is out of view
-canvas.create_window((0,0), window=frame, anchor='nw')
-
-# --- add widgets in frame ---
-
-rownum = 0 #outer rowline counter to be independant from class
-var = {} #attempting to create reference dictionary for var
-
+#widgets to go in Frames
+#Left Frame
 class marcgui:
     
     def __init__(self):
-        self.rowline = rownum #passing the row counting variable to the class
+        self.rowline = 0
         self.dropdown_vdf()
         self.rowline+=1
         self.textbox()
@@ -54,17 +31,23 @@ class marcgui:
         self.entry_button()
 
     def entry_button(self): 
-        self.new_entry = tk.Button(frame, text = 'New Entry', command = self.entry)
+        self.new_entry = tk.Button(left, text = 'Add', command = self.entry)
         self.new_entry.grid(row = self.rowline, sticky='w')
         
     def entry(self):
-        global rownum
-        rownum+=2
-        self.new_entry.grid_forget()
-        var = marcgui()
+        global field
+        self.new_entry.grid_forget() #removes button for new
+        self.p_vdf.grid_forget #removes main dropdown for new
+        try:
+            self.p_sub.grid_forget() #removes sub dropdown for new
+        except AttributeError:
+            pass
+        s = self.e.get() #saves value of entry to variable
+        field.insert('end', s + '\n') #sends entry value to text widget
+        marcgui() #restarts class for nest entry
 
     def textbox(self):
-        self.e = tk.Entry(frame) #textbox
+        self.e = tk.Entry(left) #textbox
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
         
     def dropdown_vdf(self):
@@ -79,18 +62,24 @@ class marcgui:
             self.dropdown_sub()
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
-        p_vdf = tk.OptionMenu(frame, d_vdf, *Variable_Data_Fields, command=textbox_main)
-        p_vdf.grid(row=self.rowline, sticky='w')
+        self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
+        self.p_vdf.grid(row=self.rowline, sticky='w')
 
     def dropdown_sub(self):
         def textbox_subfield(sub_value): #inserts sub value into textbox from dropdown menu
             self.e.insert(100, subfield[str(self.main_value)][sub_value]) #gets value from dictionary within dictionary
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
-        self.p_sub = tk.OptionMenu(frame, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
+        self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
         self.p_sub.grid_forget()
         self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
+
+#Right Frame
+def format_field():
+    global field
+    field = tk.Text(right)
+    field.pack(expand=True, fill='both')
     
 var = marcgui()
+format_field()
 root.mainloop()
-
