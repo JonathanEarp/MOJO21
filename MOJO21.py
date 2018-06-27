@@ -2,6 +2,7 @@
 #Copyright 2018 - Jonathan Earp
 
 import tkinter as tk
+import sys
 from marc21 import *
 
 #creating root window
@@ -10,7 +11,7 @@ root.geometry("640x400")
 root.title("MOJO21: MARC 21 Catalogue Creator")
 root.resizable(width=True, height=True)
 
-#creating Frames to put widgets in
+#creating Frames to put widgets
 left = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
 left.grid_propagate(0)
 right = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
@@ -47,7 +48,10 @@ class marcgui:
         marcgui() #restarts class for nest entry
 
     def textbox(self):
-        self.e = tk.Entry(left, width=50) #textbox
+        if sys.platform == "Windows":
+            self.e = tk.Entry(left, width=50) #textbox windows
+        else:
+            self.e = tk.Entry(left) #textbox osx
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
         
     def dropdown_vdf(self):
@@ -63,7 +67,8 @@ class marcgui:
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
         self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
-        self.p_vdf.configure(width=18)
+        if sys.platform == "Windows":
+            self.p_vdf.configure(width=18)
         self.p_vdf.grid(row=self.rowline, sticky='w')
 
     def dropdown_sub(self):
@@ -72,7 +77,8 @@ class marcgui:
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
         self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
-        self.p_sub.configure(width=18)
+        if sys.platform == "Windows":
+            self.p_sub.configure(width=18)
         self.p_sub.grid_forget()
         self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
 
