@@ -37,7 +37,7 @@ class marcgui:
     def entry(self):
         global field
         self.new_entry.grid_forget() #removes button for new
-        self.p_vdf.grid_forget #removes main dropdown for new
+        self.p_vdf.grid_forget() #removes main dropdown for new
         try:
             self.p_sub.grid_forget() #removes sub dropdown for new
         except AttributeError:
