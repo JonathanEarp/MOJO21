@@ -31,7 +31,7 @@ class marcgui:
         self.entry_button()
 
     def entry_button(self): 
-        self.new_entry = tk.Button(left, text = 'Add', command = self.entry)
+        self.new_entry = tk.Button(left, width=6, text = 'Add', command = self.entry)
         self.new_entry.grid(row = self.rowline, sticky='w')
         
     def entry(self):
@@ -47,7 +47,7 @@ class marcgui:
         marcgui() #restarts class for nest entry
 
     def textbox(self):
-        self.e = tk.Entry(left) #textbox
+        self.e = tk.Entry(left, width=50) #textbox
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
         
     def dropdown_vdf(self):
@@ -63,6 +63,7 @@ class marcgui:
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
         self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
+        self.p_vdf.configure(width=18)
         self.p_vdf.grid(row=self.rowline, sticky='w')
 
     def dropdown_sub(self):
@@ -71,6 +72,7 @@ class marcgui:
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
         self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
+        self.p_sub.configure(width=18)
         self.p_sub.grid_forget()
         self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
 
