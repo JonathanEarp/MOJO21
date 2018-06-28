@@ -48,7 +48,7 @@ class marcgui:
         marcgui() #restarts class for nest entry
 
     def textbox(self):
-        if sys.platform == "Windows":
+        if sys.platform == "win32":
             self.e = tk.Entry(left, width=50) #textbox windows
         else:
             self.e = tk.Entry(left) #textbox osx
@@ -67,7 +67,7 @@ class marcgui:
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
         self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
-        if sys.platform == "Windows":
+        if sys.platform == "win32":
             self.p_vdf.configure(width=18)
         self.p_vdf.grid(row=self.rowline, sticky='w')
 
@@ -77,7 +77,7 @@ class marcgui:
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
         self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
-        if sys.platform == "Windows":
+        if sys.platform == "win32":
             self.p_sub.configure(width=18)
         self.p_sub.grid_forget()
         self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
@@ -91,3 +91,4 @@ def format_field():
 var = marcgui()
 format_field()
 root.mainloop()
+
