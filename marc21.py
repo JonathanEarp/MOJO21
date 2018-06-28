@@ -1,6 +1,6 @@
 #data
 Variable_Data_Fields={
-    '--Control Information, Number, and Codes-General Information--':"--",
+    '--Control Information, Number, and Codes - General Information--':"--",
     '010: Library of Congress Control Number':"010 ##",
     '013: Patent Control Information':"013 ##",
     '015: National Bibliography Number':"015 ##",
@@ -49,6 +49,15 @@ Variable_Data_Fields={
     '085: Synthesized Classification Number Components':"085 ##",
     '086: Government Document Classification Number':"086 ##",
     '088: Report Number':"088 ##",
+    '--Title and Title-Related Fields - General Information--':"--",
+    '210: Abbreviated Title':"210 ##",
+    '222: Key Title':"222 ##",
+    '240: Uniform Title':"240 ##",
+    '242: Translation of Title by Cataloging Agency':"242 ##",
+    '243: Collective Uniform Title':"243 ##",
+    '245: Title Statement':"245 ##",
+    '246: Varying Form of Title':"246 ##",
+    '247: Former Title':"247 ##",
     }
 
 
