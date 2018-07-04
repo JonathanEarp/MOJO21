@@ -5,7 +5,7 @@ Variable_Data_Fields={
     '013: Patent Control Information':"013 ##",
     '015: National Bibliography Number':"015 ##",
     '016: National Bibliography Agency Control Number':"016 ##",
-    '017: Copyrighy or Legal Deposit Number':"017 ##",
+    '017: Copyright or Legal Deposit Number':"017 ##",
     '018: Copyright Article-Fee Code':"018 ##",
     '020: International Standard Book Number (ISBN)':"020 ##",
     '022: International Standard Serial Number (ISSN)':"022 ##",
@@ -490,4 +490,143 @@ subfield={
     'Linkage':"$6",
     'Field link and sequence number':"$8",
     },
+    '210 ##':{
+    'Abbreviated title':"$a",
+    'Qualifying information':"$b",
+    'Source':"$2",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '222 ##':{
+    'Key title':"$a",
+    'Qualifying information':"$b",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '240 ##':{
+    'Uniform title':"$a",
+    'Date of treaty signing':"$d",
+    'Date of a work':"$f",
+    'Miscellaneous information':"$g",
+    'Medium':"$h",
+    'Form subheading':"$k",
+    'Language of a work':"$l",
+    'Medium of performance for music':"$m",
+    'Number of part/section of a work':"$n",
+    'Arranged statement for music':"$o",
+    'Name of part/section of a work':"$p",
+    'Key for music':"$r",
+    'Version':"$s",
+    'Authority record control number or standard number':"$0",
+    'Real World Object URI':"$1",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '242 ##':{
+    'Title':"$a",
+    'Remainder of title':"$b",
+    'Statement of responsibility, etc.':"$c",
+    'Medium':"$h",
+    'Number of part/section of a work':"$n",
+    'Name of part/section of a work':"$p",
+    'Language code of translated title':"$y",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '243 ##':{
+    'Uniform title':"$a",
+    'Date of treaty signing':"$d",
+    'Date of a work':"$f",
+    'Miscellaneous information':"$g",
+    'Medium':"$h",
+    'Form subheading':"$k",
+    'Language of a work':"$l",
+    'Medium of performance for music':"$m",
+    'Number of part/section of a work':"$n",
+    'Arranged statement for music':"$o",
+    'Name of part/section of a work':"$p",
+    'Key for music':"$r",
+    'Version':"$s",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '245 ##':{
+    'Title':"$a",
+    'Remainder of title':"$b",
+    'Statement of responsibility, etc.':"$c",
+    'Inclusive dates':"$f",
+    'Bulk dates':"$g",
+    'Medium':"$h",
+    'Form':"$k",
+    'Number of part/section of a work':"$n",
+    'Name of part/section of a work':"$p",
+    'Version':"$s",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '246 ##':{
+    'Title proper/short title':"$a",
+    'Remainder of title':"$b",
+    'Date or sequential designation':"$f",
+    'Miscellaneous information':"$g",
+    'Medium':"$h",
+    'Display text':"$i",
+    'Number of part/section of a work':"$n",
+    'Name of part/section of a work':"$p",
+    'Institution to which field applies':"$5",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '247 ##':{
+    'Title':"$a",
+    'Remainder of title':"$b",
+    'Date or sequential designation':"$f",
+    'Miscellaneous information':"$g",
+    'Medium':"$h",
+    'Number of part/section of a work':"$n",
+    'Name of part/section of a work':"$p",
+    'International Standard Serial Number':"$x",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
     }
+
+Indicator={
+    '010 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '013 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '015 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '016 ##':"-----First Indicator-----\nnational bibliographic agency\n# - Library and Archives Canada\n7 - Source specified in subfield $2\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '017 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\ndisplay constant controller\n# - Copyright/legal deposit number\n8 - No display constant generated"
+    ,
+    '018 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '020 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '022 ##':"-----First Indicator-----\nlevel of international interest\n# - No level specified\n0 - Continuing international interest\n1 - No continuing international interest\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '024 ##':"-----First Indicator-----\ntype of standard number or code\n0 - International Standard Recording Code\n1 - Universal Product Code\n2 - International Standard Music Number\n3 - International Article Number\n4 - Serial Item/Contribution Identifier\n7 - Source specified in subfield $2\n8 - Unspecified type of standard number/code\n-----Second Indicator-----\ndifference indicator\n# - No information provided\n0 - No difference\n1 - Difference"
+    ,
+    '025 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '027 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '028 ##':"-----First Indicator-----\ntype of number\n0 - Issue number\n1 - Matrix number\n2 - Plate number\n3 - Other music publisher number\n4 - Video recording publisher number\n5 - Other publisher number\n6 - Distributor number\n-----Second Indicator-----\nnote/added entry controller\n0 - No note, no added entry\n1 - Note, added entry\n2 - Note, no added entry\n3 - No note, added entry"
+    ,
+    '030 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '031 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '032 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '033 ##':"-----First Indicator-----\ntype of date in subfield $a\n# - No date information\n0 - Single date\n1 - Multiple single dates\n2 - Range of dates\n-----Second Indicator-----\ntype of event\n# - No information provided\n0 - Capture\n1 - Broadcast\n2 - Finding"
+    ,
+    '034 ##':"-----First Indicator-----\ntype of scale\n0 - Scale indeterminable/No scale recorded\n1 - Single scale\n3 - Range of scales\n-----Second Indicator-----\ntype of ring\n# - Not applicable\n0 - Outer ring\n1 - Exclusion ring"
+    ,
+    '035 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    }
+

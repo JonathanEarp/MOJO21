@@ -13,10 +13,19 @@ root.resizable(width=True, height=True)
 
 #creating Frames to put widgets
 left = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
-left.grid_propagate(0)
+left.pack_propagate(False)
+left1 = tk.Frame(left, width=320, borderwidth=2, relief="sunken")
+left1.pack_propagate(False)
+left2 = tk.Frame(left, width=320, height=280, borderwidth=2, relief="sunken")
+left2.pack_propagate(False)
+left3 = tk.Frame(left, width=320, height=26, borderwidth=2, relief="sunken")
+left3.pack_propagate(False)
 right = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
 
 left.pack(side="left", expand=True, fill="both")
+left1.pack(side="top", fill="x")
+left2.pack(fill="x")
+left3.pack(side="bottom", fill="x")
 right.pack(side="right", expand=True, fill="both")
 
 #widgets to go in Frames
@@ -32,7 +41,7 @@ class marcgui:
         self.entry_button()
 
     def entry_button(self): 
-        self.new_entry = tk.Button(left, width=6, text = 'Add', command = self.entry)
+        self.new_entry = tk.Button(left1, width=6, text = 'Add', command = self.entry)
         self.new_entry.grid(row = self.rowline, sticky='w')
         
     def entry(self):
@@ -40,18 +49,22 @@ class marcgui:
         self.new_entry.grid_forget() #removes button for new
         self.p_vdf.grid_forget() #removes main dropdown for new
         try:
-            self.p_sub.grid_forget() #removes sub dropdown for new
+            self.p_sub.grid_forget()
         except AttributeError:
             pass
-        s = self.e.get() #saves value of entry to variable
-        field.insert('end', s + '\n') #sends entry value to text widget
+        try:
+            self.label_2.pack_forget()
+        except AttributeError:
+            pass
+        field_entry = self.e.get() #saves value of entry to variable
+        field.insert('end', field_entry + '\n') #sends entry value to text widget
         marcgui() #restarts class for nest entry
 
     def textbox(self):
-        if sys.platform == "Windows":
-            self.e = tk.Entry(left, width=50) #textbox windows
+        if sys.platform == "win32":
+            self.e = tk.Entry(left1, width=50) #textbox windows
         else:
-            self.e = tk.Entry(left) #textbox osx
+            self.e = tk.Entry(left1) #textbox osx
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
         
     def dropdown_vdf(self):
@@ -63,11 +76,16 @@ class marcgui:
                 self.p_sub.grid_forget()
             except AttributeError:
                 pass
+            try:
+                self.label_2.pack_forget()
+            except AttributeError:
+                pass
             self.dropdown_sub()
+            self.indicator_field()
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
-        self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
-        if sys.platform == "Windows":
+        self.p_vdf = tk.OptionMenu(left1, d_vdf, *Variable_Data_Fields, command=textbox_main)
+        if sys.platform == "win32":
             self.p_vdf.configure(width=18)
         self.p_vdf.grid(row=self.rowline, sticky='w')
 
@@ -76,18 +94,30 @@ class marcgui:
             self.e.insert(100, subfield[str(self.main_value)][sub_value]) #gets value from dictionary within dictionary
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
-        self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
-        if sys.platform == "Windows":
+        self.p_sub = tk.OptionMenu(left1, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
+        if sys.platform == "win32":
             self.p_sub.configure(width=18)
         self.p_sub.grid_forget()
         self.p_sub.grid(row=self.rowline-2, column=1, sticky='w')
+
+    def indicator_field(self):
+        self.l2 = tk.StringVar()
+        self.l2.set(Indicator[str(self.main_value)])
+        self.label_2 = tk.Label(left2, textvariable=self.l2, anchor="w", justify="left")
+        self.label_2.pack(side='top', anchor='w')
+
+
+#label for left3 bottom frame
+l3 = tk.Label(left3, text="MOJO21 Copyright 2018, Jonathan Earp")
+l3.pack()
 
 #Right Frame
 def format_field():
     global field
     field = tk.Text(right)
     field.pack(expand=True, fill='both')
-    
+           
 var = marcgui()
 format_field()
 root.mainloop()
+
