@@ -62,11 +62,7 @@ class marcgui:
 
     def textbox(self):
         if sys.platform == "win32":
-<<<<<<< HEAD
             self.e = tk.Entry(left1, width=50) #textbox windows
-=======
-            self.e = tk.Entry(left, width=50) #textbox windows
->>>>>>> b9693b6f1d89bc10b46c26cf5f97d646cba59d29
         else:
             self.e = tk.Entry(left1) #textbox osx
         self.e.grid(row=self.rowline, columnspan=2, sticky='we')
@@ -88,11 +84,7 @@ class marcgui:
             self.indicator_field()
         d_vdf = tk.StringVar()
         d_vdf.set('Variable Data Field')
-<<<<<<< HEAD
         self.p_vdf = tk.OptionMenu(left1, d_vdf, *Variable_Data_Fields, command=textbox_main)
-=======
-        self.p_vdf = tk.OptionMenu(left, d_vdf, *Variable_Data_Fields, command=textbox_main)
->>>>>>> b9693b6f1d89bc10b46c26cf5f97d646cba59d29
         if sys.platform == "win32":
             self.p_vdf.configure(width=18)
         self.p_vdf.grid(row=self.rowline, sticky='w')
@@ -102,11 +94,7 @@ class marcgui:
             self.e.insert(100, subfield[str(self.main_value)][sub_value]) #gets value from dictionary within dictionary
         d_sub = tk.StringVar()
         d_sub.set('Sub-Field')
-<<<<<<< HEAD
         self.p_sub = tk.OptionMenu(left1, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
-=======
-        self.p_sub = tk.OptionMenu(left, d_sub, *subfield[str(self.main_value)], command=textbox_subfield)
->>>>>>> b9693b6f1d89bc10b46c26cf5f97d646cba59d29
         if sys.platform == "win32":
             self.p_sub.configure(width=18)
         self.p_sub.grid_forget()
