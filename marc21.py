@@ -592,69 +592,115 @@ subfield={
     }
 
 Indicator={
-    '010 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '010 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '013 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '013 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '015 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '015 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '016 ##':"-----First Indicator-----\nnational bibliographic agency\n# - Library and Archives Canada\n7 - Source specified in subfield $2\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '016 ##':"-----First Indicator-----\nNational bibliographic agency\n# - Library and Archives Canada\n7 - Source specified in subfield $2\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '017 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\ndisplay constant controller\n# - Copyright/legal deposit number\n8 - No display constant generated"
+    '017 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nDisplay constant controller\n# - Copyright/legal deposit number\n8 - No display constant generated"
     ,
-    '018 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '018 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '020 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '020 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '022 ##':"-----First Indicator-----\nlevel of international interest\n# - No level specified\n0 - Continuing international interest\n1 - No continuing international interest\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '022 ##':"-----First Indicator-----\nLevel of international interest\n# - No level specified\n0 - Continuing international interest\n1 - No continuing international interest\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '024 ##':"-----First Indicator-----\ntype of standard number or code\n0 - International Standard Recording Code\n1 - Universal Product Code\n2 - International Standard Music Number\n3 - International Article Number\n4 - Serial Item/Contribution Identifier\n7 - Source specified in subfield $2\n8 - Unspecified type of standard number/code\n-----Second Indicator-----\ndifference indicator\n# - No information provided\n0 - No difference\n1 - Difference"
+    '024 ##':"-----First Indicator-----\nType of standard number or code\n0 - International Standard Recording Code\n1 - Universal Product Code\n2 - International Standard Music Number\n3 - International Article Number\n4 - Serial Item/Contribution Identifier\n7 - Source specified in subfield $2\n8 - Unspecified type of standard number/code\n-----Second Indicator-----\nDifference indicator\n# - No information provided\n0 - No difference\n1 - Difference"
     ,
-    '025 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '025 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '027 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '027 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '028 ##':"-----First Indicator-----\ntype of number\n0 - Issue number\n1 - Matrix number\n2 - Plate number\n3 - Other music publisher number\n4 - Video recording publisher number\n5 - Other publisher number\n6 - Distributor number\n-----Second Indicator-----\nnote/added entry controller\n0 - No note, no added entry\n1 - Note, added entry\n2 - Note, no added entry\n3 - No note, added entry"
+    '028 ##':"-----First Indicator-----\nType of number\n0 - Issue number\n1 - Matrix number\n2 - Plate number\n3 - Other music publisher number\n4 - Video recording publisher number\n5 - Other publisher number\n6 - Distributor number\n-----Second Indicator-----\nNote/added entry controller\n0 - No note, no added entry\n1 - Note, added entry\n2 - Note, no added entry\n3 - No note, added entry"
     ,
-    '030 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '030 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '031 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '031 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '032 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '032 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '033 ##':"-----First Indicator-----\ntype of date in subfield $a\n# - No date information\n0 - Single date\n1 - Multiple single dates\n2 - Range of dates\n-----Second Indicator-----\ntype of event\n# - No information provided\n0 - Capture\n1 - Broadcast\n2 - Finding"
+    '033 ##':"-----First Indicator-----\nType of date in subfield $a\n# - No date information\n0 - Single date\n1 - Multiple single dates\n2 - Range of dates\n-----Second Indicator-----\nType of event\n# - No information provided\n0 - Capture\n1 - Broadcast\n2 - Finding"
     ,
-    '034 ##':"-----First Indicator-----\ntype of scale\n0 - Scale indeterminable/No scale recorded\n1 - Single scale\n3 - Range of scales\n-----Second Indicator-----\ntype of ring\n# - Not applicable\n0 - Outer ring\n1 - Exclusion ring"
+    '034 ##':"-----First Indicator-----\nType of scale\n0 - Scale indeterminable/No scale recorded\n1 - Single scale\n3 - Range of scales\n-----Second Indicator-----\nType of ring\n# - Not applicable\n0 - Outer ring\n1 - Exclusion ring"
     ,
-    '035 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '035 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '036 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '036 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '037 ##':"-----First Indicator-----\nsource of acquisition sequence\n# - Not applicable/No information provided/Earliest\n2 - Intervening\n3 - Current/Latest\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '037 ##':"-----First Indicator-----\nSource of acquisition sequence\n# - Not applicable/No information provided/Earliest\n2 - Intervening\n3 - Current/Latest\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '038 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '038 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '040 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '040 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '041 ##':"-----First Indicator-----\ntranslation indication\n# - No information provided\n0 - Item not a translation/does not include a translation\n1 - Item is or includes a translation\n-----Second Indicator-----\nsource of code\n# - MARC language code\n7 - Source specified in subfield $2"
+    '041 ##':"-----First Indicator-----\nTranslation indication\n# - No information provided\n0 - Item not a translation/does not include a translation\n1 - Item is or includes a translation\n-----Second Indicator-----\nSource of code\n# - MARC language code\n7 - Source specified in subfield $2"
     ,
-    '042 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '042 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '043 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '043 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '044 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '044 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '045 ##':"-----First Indicator-----\ntype of time period in subfield $b or $c\n# - Subfield $b or $c not present\n0 - Single date/time\n1 - Multiple single dates/times\n2 - Range of dates/times\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '045 ##':"-----First Indicator-----\nType of time period in subfield $b or $c\n# - Subfield $b or $c not present\n0 - Single date/time\n1 - Multiple single dates/times\n2 - Range of dates/times\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '046 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '046 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
-    '047 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nsource of code\n# - MARC musical composition code\n7 - Source specified in subfield $2"
+    '047 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nSource of code\n# - MARC musical composition code\n7 - Source specified in subfield $2"
     ,
-    '048 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nsource of code\n# - MARC code\n7 - Source specified in subfield $2"
+    '048 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nSource of code\n# - MARC code\n7 - Source specified in subfield $2"
     ,
-    '050 ##':"-----First Indicator-----\nexistence in LC collection\n# - No information provided\n0 - Item is in LC\n1 - Item is not in LC\n-----Second Indicator-----\nsource of call number\n0 - Assigned by LC\n4 - Assigned by agency other than LC"
+    '050 ##':"-----First Indicator-----\nExistence in LC collection\n# - No information provided\n0 - Item is in LC\n1 - Item is not in LC\n-----Second Indicator-----\nSource of call number\n0 - Assigned by LC\n4 - Assigned by agency other than LC"
     ,
-    '051 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    '051 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '052 ##':"-----First Indicator-----\nCode source\n# - Library of Congress Classification\n1 - U.S. Dept. of Defence Classification\n7 - Source specified in subfield $2\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '055 ##':"-----First Indicator-----\nExistence in LAC collection\n# - Information not provided\n0 - Word held by LAC\n1 - Work not held by LAC\n-----Second Indicator-----\nType, completeness, source of class/call number\n0 - LC-based call number assigned by LAC\n1 - Complete LC class number assigned by LAC\n2 - Incomplete LC class number assigned by LAC\n3 - LC-based call number assigned by the contributing library\n4 - Complete LC class number assigned by the contributing library\n5 - Incomplete LC class number assigned by the contributing library\n6 - Other call number assigned by the LAC\n7 - Other class number assigned by LAC\n8 - Other call number assigned by the contributing library\n9 - Other class number assigned by the contributing library"
+    ,
+    '060 ##':"-----First Indicator-----\nExistence in NLM collection\n# - No information provided\n0 - Item is in NLM\n1 - Item is not in NLM\n-----Second Indicator-----\nSource of call number\n0 - Assigned by NLM\n4 - Assigned by agency other than NLM"
+    ,
+    '061 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '066 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '070 ##':"-----First Indicator-----\nExistence in NAL collection\n# - No information provided\n0 - Item is in NAL\n1 - Item is not in NAL\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '071 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '072 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nCode source\n0 - NAL subject category code list\n7 - Source specified in subfield $2"
+    ,
+    '074 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '080 ##':"-----First Indicator-----\nType of edition\n# - No information provided\n0 - Full\n1 - Abridged\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '082 ##':"-----First Indicator-----\nType of edition\n0 - Full edition\n1 - Abridged edition\n7 - Other edition specified in subfield $2\n-----Second Indicator-----\nSource of classification number\n# - No information provided\n0 - Assigned by LC\n4 - Assigned by agency other than LC"
+    ,
+    '084 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '085 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '086 ##':"-----First Indicator-----\nNumber source\n# - Source speficied in subfield $2\n0 - Superintendent of Documents Classification System\n1 - Government of Canada Publications: Outline of Classification\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '088 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '210 ##':"-----First Indicator-----\nTitle added entry\n0 - No added entry\n1 - Added entry\n-----Second Indicator-----\nType\n# - Abbreviated key title\n0 - Other abbreviated title"
+    ,
+    '222 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nNonfiling characters\n0 - No nonfiling characters\n1-9 - Number of nonfiling characters"
+    ,
+    '240 ##':"-----First Indicator-----\nUniform title printed or displayed\n0 - Not printed or displayed\n1 - Printed or displayed\n-----Second Indicator-----\nNonfiling characters\n0-9 - Number of nonfiling characters"
+    ,
+    '242 ##':"-----First Indicator-----\nTitle added entry\n0 - No added entry\n1 - Added entry\n-----Second Indicator-----\nNonfiling characters\n0 - No nonfiling characters\n1-9 - Number of nonfiling characters"
+    ,
+    '243 ##':"-----First Indicator-----\nUniform title printed or displayed\n0 - Not printed or displayed\n1 - Printed or displayed\n-----Second Indicator-----\nNonfiling characters\n0-9 - Number of nonfiling characters"
+    ,
+    '245 ##':"-----First Indicator-----\nTitle added entry\n0 - No added entry\n1 - Added entry\n-----Second Indicator-----\nNonfiling characters\n0 - No nonfiling characters\n1-9 - Number of nonfiling characters"
+    ,
+    '246 ##':"-----First Indicator-----\nNote/added entry controller\n0 - Note, no added entry\n1 - Note, added entry\n2 - No note, no added entry\n3 - No note, added entry\n-----Second Indicator-----\nType of title\n# - No type specified\n0 - Portion of title\n1 - Parallel title\n2 - Distinctive title\n3 - Other title\n4 - Cover title\n5 - Added title page title\n6 - Caption title\n7 - Running title\n8 - Spine title"
+    ,
+    '247 ##':"-----First Indicator-----\nTitle added entry\n0 - No added entry\n1 - Added entry\n-----Second Indicator-----\nNote controller\n0 - Display note\n1 - Do not display note"
     ,
     }
 

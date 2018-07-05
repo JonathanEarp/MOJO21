@@ -7,18 +7,18 @@ from marc21 import *
 
 #creating root window
 root = tk.Tk()
-root.geometry("640x400")
+root.geometry("800x480")
 root.title("MOJO21: MARC 21 Catalogue Creator")
 root.resizable(width=True, height=True)
 
 #creating Frames to put widgets
-left = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
+left = tk.Frame(root, width=400, borderwidth=2, relief="sunken")
 left.pack_propagate(False)
-left1 = tk.Frame(left, width=320, borderwidth=2, relief="sunken")
+left1 = tk.Frame(left, width=400, borderwidth=2, relief="sunken")
 left1.pack_propagate(False)
-left2 = tk.Frame(left, width=320, height=285, borderwidth=2, relief="sunken")
+left2 = tk.Frame(left, width=400, height=360, borderwidth=2, relief="sunken")
 left2.pack_propagate(False)
-right = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
+right = tk.Frame(root, width=400, borderwidth=2, relief="sunken")
 
 left.pack(side="left", expand=True, fill="both")
 left1.pack(side="top", fill="x")
@@ -100,7 +100,7 @@ class marcgui:
     def indicator_field(self):
         self.l2 = tk.StringVar()
         self.l2.set(Indicator[str(self.main_value)])
-        self.label_2 = tk.Label(left2, textvariable=self.l2, anchor="w", justify="left")
+        self.label_2 = tk.Label(left2, textvariable=self.l2, anchor="w", justify="left", wraplength=380)
         self.label_2.pack(side='top', anchor='w')
 
 
