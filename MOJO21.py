@@ -16,16 +16,13 @@ left = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
 left.pack_propagate(False)
 left1 = tk.Frame(left, width=320, borderwidth=2, relief="sunken")
 left1.pack_propagate(False)
-left2 = tk.Frame(left, width=320, height=280, borderwidth=2, relief="sunken")
+left2 = tk.Frame(left, width=320, height=285, borderwidth=2, relief="sunken")
 left2.pack_propagate(False)
-left3 = tk.Frame(left, width=320, height=26, borderwidth=2, relief="sunken")
-left3.pack_propagate(False)
 right = tk.Frame(root, width=320, borderwidth=2, relief="sunken")
 
 left.pack(side="left", expand=True, fill="both")
 left1.pack(side="top", fill="x")
 left2.pack(fill="x")
-left3.pack(side="bottom", fill="x")
 right.pack(side="right", expand=True, fill="both")
 
 #widgets to go in Frames
@@ -107,9 +104,9 @@ class marcgui:
         self.label_2.pack(side='top', anchor='w')
 
 
-#label for left3 bottom frame
-l3 = tk.Label(left3, text="MOJO21 Copyright 2018, Jonathan Earp")
-l3.pack()
+#label for bottom frame
+name_label = tk.Label(left, text="MOJO21 Copyright 2018, Jonathan Earp")
+name_label.pack(side='bottom')
 
 #Right Frame
 def format_field():
