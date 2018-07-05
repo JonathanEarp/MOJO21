@@ -628,5 +628,33 @@ Indicator={
     ,
     '035 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
     ,
+    '036 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '037 ##':"-----First Indicator-----\nsource of acquisition sequence\n# - Not applicable/No information provided/Earliest\n2 - Intervening\n3 - Current/Latest\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '038 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '040 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '041 ##':"-----First Indicator-----\ntranslation indication\n# - No information provided\n0 - Item not a translation/does not include a translation\n1 - Item is or includes a translation\n-----Second Indicator-----\nsource of code\n# - MARC language code\n7 - Source specified in subfield $2"
+    ,
+    '042 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '043 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '044 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '045 ##':"-----First Indicator-----\ntype of time period in subfield $b or $c\n# - Subfield $b or $c not present\n0 - Single date/time\n1 - Multiple single dates/times\n2 - Range of dates/times\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '046 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
+    '047 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nsource of code\n# - MARC musical composition code\n7 - Source specified in subfield $2"
+    ,
+    '048 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nsource of code\n# - MARC code\n7 - Source specified in subfield $2"
+    ,
+    '050 ##':"-----First Indicator-----\nexistence in LC collection\n# - No information provided\n0 - Item is in LC\n1 - Item is not in LC\n-----Second Indicator-----\nsource of call number\n0 - Assigned by LC\n4 - Assigned by agency other than LC"
+    ,
+    '051 ##':"-----First Indicator-----\nundefined\n# - Undefined\n-----Second Indicator-----\nundefined\n# - Undefined"
+    ,
     }
 
