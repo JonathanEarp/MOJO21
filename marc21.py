@@ -1,6 +1,6 @@
 #data
 Variable_Data_Fields={
-    '--Control Information, Number, and Codes - General Information--':"--",
+    '--Control Information, Number, and Codes--':"--",
     '010: Library of Congress Control Number':"010 ##",
     '013: Patent Control Information':"013 ##",
     '015: National Bibliography Number':"015 ##",
@@ -49,7 +49,7 @@ Variable_Data_Fields={
     '085: Synthesized Classification Number Components':"085 ##",
     '086: Government Document Classification Number':"086 ##",
     '088: Report Number':"088 ##",
-    '--Title and Title-Related Fields - General Information--':"--",
+    '--Title and Title-Related Fields--':"--",
     '210: Abbreviated Title':"210 ##",
     '222: Key Title':"222 ##",
     '240: Uniform Title':"240 ##",
@@ -58,6 +58,17 @@ Variable_Data_Fields={
     '245: Title Statement':"245 ##",
     '246: Varying Form of Title':"246 ##",
     '247: Former Title':"247 ##",
+    '--Edition, Imprint, Etc. Fields--':"--",
+    '250: Edition Statement':"250 ##",
+    '254: Musical Presentation Statement':"254 ##",
+    '255: Cartographic Mathematical Data':"255 ##",
+    '256: Computer File Characteristics':"256 ##",
+    '257: Country of Producing Entity':"257 ##",
+    '258: Philatelic Issue Data':"258 ##",
+    '260: Publication, Distribution, etc. (Imprint)':"260 ##",
+    '263: Projected Publication Date':"263 ##",
+    '264: Production, Publication, Distribution, Manufacture, and Copyright Notice':"264 ##",
+    '270: Address':"270 ##",
     }
 
 
@@ -589,9 +600,100 @@ subfield={
     'Linkage':"$6",
     'Field link and sequence number':"$8",
     },
+    '250 ##':{
+    'Edition Statement':"$a",
+    'Remainder of edition statement':"$b",
+    'Materials specified':"$3",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '254 ##':{
+    'Musical presentation statement':"$a",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '255 ##':{
+    'Statement of scale':"$a",
+    'Statement of projection':"$b",
+    'Statement of coordinates':"$c",
+    'Statement of zone':"$d",
+    'Statement of equinox':"$e",
+    'Outer G-ring coordinate pairs':"$f",
+    'Exclusion G-ring coordinate pairs':"$q",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '256 ##':{
+    'Computer file characteristics':"$a",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '257 ##':{
+    'Title':"$a",
+    'Authority record control number or standard number':"$0",
+    'Real World Object URI':"$1",
+    'Source':"$2",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '258 ##':{
+    'Issuing jurisdiction':"$a",
+    'Denomination':"$b",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '260 ##':{
+    'Place of publication, distribution, etc.':"$a",
+    'Name of publisher, distributor, etc.':"$b",
+    'Date of publication, distribution, etc.':"$c",
+    'Place of manufacture':"$e",
+    'Manufacturer':"$f",
+    'Date of manufacture':"$g",
+    'Materials specified':"$3",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '263 ##':{
+    'Projected publication date':"$a",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '264 ##':{
+    'Place of production, publication, distribution, manufacture':"$a",
+    'Name of producer, publisher, distributer, manufacturer':"$b",
+    'Date of production, publication, distribution, manufacture, or copyright notice':"$c",
+    'Materials specified':"$3",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
+    '270 ##':{
+    'Address':"$a",
+    'City':"$b",
+    'State or province':"$c",
+    'Country':"$d",
+    'Postal code':"$e",
+    'Terms preceding attention name':"$f",
+    'Attention name':"$g",
+    'Attention position':"$h",
+    'Type of address':"$i",
+    'Specialized telephone number':"$j",
+    'Telephone number':"$k",
+    'Fax number':"$l",
+    'Electronic mail address':"$m",
+    'TDD or TTY number':"$n",
+    'Contact person':"$p",
+    'Title of contact person':"$q",
+    'Hours':"$r",
+    'Public note':"$z",
+    'Relationship':"$4",
+    'Linkage':"$6",
+    'Field link and sequence number':"$8",
+    },
     }
 
 Indicator={
+    '--':"--Please choose a Variable Data Field--"
+    ,
     '010 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
     ,
     '013 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
@@ -701,6 +803,26 @@ Indicator={
     '246 ##':"-----First Indicator-----\nNote/added entry controller\n0 - Note, no added entry\n1 - Note, added entry\n2 - No note, no added entry\n3 - No note, added entry\n-----Second Indicator-----\nType of title\n# - No type specified\n0 - Portion of title\n1 - Parallel title\n2 - Distinctive title\n3 - Other title\n4 - Cover title\n5 - Added title page title\n6 - Caption title\n7 - Running title\n8 - Spine title"
     ,
     '247 ##':"-----First Indicator-----\nTitle added entry\n0 - No added entry\n1 - Added entry\n-----Second Indicator-----\nNote controller\n0 - Display note\n1 - Do not display note"
+    ,
+    '250 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '254 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '255 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '256 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '257 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '258 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '260 ##':"-----First Indicator-----\nSequence of publishing statements\n# - Not applicable/No information/Earliest available publisher\n2 - Intervening publisher\n3 - Current/latest publisher\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '263 ##':"-----First Indicator-----\nUndefined\n# - Undefined\n-----Second Indicator-----\nUndefined\n# - Undefined"
+    ,
+    '264 ##':"-----First Indicator-----\nSequence of statements\n# - Not applicable/No information provided/Earliest\n2 - Intervening\n3 - Current/Latest\n-----Second Indicator-----\nFunction of entity\n0 - Production\n1 - Publication\n2 - Distribution\n3 - Manufacture\n4 - Copyright notice date"
+    ,
+    '270 ##':"-----First Indicator-----\nLevel\n# - No level specified\n1 - Primary\n2 - Secondary\n-----Second Indicator-----\nType of address\n# - No type specified\n0 - Mailing\n7 - Type specified in subfield $i"
     ,
     }
 
