@@ -105,7 +105,7 @@ class marcgui:
 
 
 #label for bottom frame
-name_label = tk.Label(left, text="MOJO21 Copyright 2018, Jonathan Earp")
+name_label = tk.Label(left, text="MOJO21 (v1.0) Copyright 2018, Jonathan Earp")
 name_label.pack(side='bottom')
 
 #Right Frame
